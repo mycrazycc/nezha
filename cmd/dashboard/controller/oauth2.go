@@ -37,8 +37,8 @@ func (oa *oauth2controller) getCommonOauth2Config(c *gin.Context) *oauth2.Config
 			ClientSecret: singleton.Conf.Oauth2.ClientSecret,
 			Scopes:       []string{},
 			Endpoint: oauth2.Endpoint{
-				AuthURL:  "https://gitee.com/oauth/authorize",
-				TokenURL: "https://gitee.com/oauth/token",
+				AuthURL:  "https://nas.ccnut.cn:5001/oauth/oauth_login.cgi",
+				TokenURL: "https://nas.ccnut.cn:5001/oauth/token",
 			},
 			RedirectURL: oa.getRedirectURL(c),
 		}
